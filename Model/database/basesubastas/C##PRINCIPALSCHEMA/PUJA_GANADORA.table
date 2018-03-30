@@ -1,0 +1,215 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>PUJA_GANADORA</name>
+  <columns>
+    <column>
+      <name>IDSUBASTA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>IDSUBASTA</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PUJA_GANADORA</name>
+              <identifier class="java.math.BigDecimal">74322</identifier>
+              <schemaName>C##PRINCIPALSCHEMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>IDPUJA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>IDPUJA</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PUJA_GANADORA</name>
+              <identifier class="java.math.BigDecimal">74322</identifier>
+              <schemaName>C##PRINCIPALSCHEMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PUJA_GANADORA_PUJA_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>IDPUJA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PUJA_GANADORA</name>
+            <schemaName>C##PRINCIPALSCHEMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>C##PRINCIPALSCHEMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUJA_GANADORA_PUJA_FK1</name>
+            <childObjectNames>
+              <childObjectName>IDPUJA</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PUJA_GANADORA</name>
+              <identifier class="java.math.BigDecimal">74322</identifier>
+              <schemaName>C##PRINCIPALSCHEMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PUJA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PUJA</name>
+          <schemaName>C##PRINCIPALSCHEMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>C##PRINCIPALSCHEMA</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PUJA_GANADORA_SUBASTA_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>IDSUBASTA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PUJA_GANADORA</name>
+            <schemaName>C##PRINCIPALSCHEMA</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>C##PRINCIPALSCHEMA</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>CASCADE</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>PUJA_GANADORA_SUBASTA_FK1</name>
+            <childObjectNames>
+              <childObjectName>IDSUBASTA</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>PUJA_GANADORA</name>
+              <identifier class="java.math.BigDecimal">74322</identifier>
+              <schemaName>C##PRINCIPALSCHEMA</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>SUBASTA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>SUBASTA</name>
+          <schemaName>C##PRINCIPALSCHEMA</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>C##PRINCIPALSCHEMA</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+  </constraints>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">basesubastas</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>PUJA_GANADORA</name>
+        <identifier class="java.math.BigDecimal">74322</identifier>
+        <schemaName>C##PRINCIPALSCHEMA</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleInMemoryProperties</key>
+      <value class="oracle.javatools.db.ora.OracleInMemoryProperties">
+        <inMemory>false</inMemory>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <freelistGroups>1</freelistGroups>
+        <freelists>1</freelists>
+        <initialExtent>65536</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>1048576</nextExtent>
+        <percentFree>10</percentFree>
+        <percentUsed>40</percentUsed>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>SYSTEM</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <parallelDegree>1</parallelDegree>
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>C##PRINCIPALSCHEMA</name>
+  </schema>
+</table>

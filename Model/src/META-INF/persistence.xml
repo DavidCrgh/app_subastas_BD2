@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+  <persistence-unit name="Model">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>java:/app/jdbc/jdbc/basesubastasDS</jta-data-source>
+    <class>subastas.model.Administrador</class>
+    <class>subastas.model.Categoria</class>
+    <class>subastas.model.Item</class>
+    <class>subastas.model.Participante</class>
+    <class>subastas.model.Puja</class>
+    <class>subastas.model.PujaGanadora</class>
+    <class>subastas.model.Resenna</class>
+    <class>subastas.model.Subasta</class>
+    <class>subastas.model.Subcategoria</class>
+    <class>subastas.model.Telefono</class>
+    <class>subastas.model.Usuario</class>
+    <class>subastas.model.Variablessistema</class>
+    <properties>
+      <property name="eclipselink.target-server" value="WebLogic_10"/>
+      <property name="javax.persistence.jtaDataSource" value="java:/app/jdbc/jdbc/basesubastasDS"/>
+    </properties>
+  </persistence-unit>
+</persistence>
